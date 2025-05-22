@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weight Converter</title>
+</head>
+<body>
+    <nav style="margin-bottom: 20px; padding: 10px; background-color: #f0f0f0; text-align: center;">
+        <strong>Switch Converter:</strong> &nbsp;&nbsp;
+        <a href="/length">Length</a> &nbsp;|&nbsp;
+        <a href="/temp">Temperature</a> &nbsp;|&nbsp;
+        <a href="/">Home</a>
+    </nav>
+    <hr style="margin-bottom: 20px;">
+    <h1>Weight Converter</h1>
+
+    <form method="POST" action="">
+        <label for="value_input">Value to Convert:</label>
+        <input type="number" id="value_input" name="value_to_convert" step="any" placeholder="Enter value" required>
+        <br><br>
+
+        <label for="from_unit_select">From Unit:</label>
+        <select id="from_unit_select" name="from_unit">
+            <option value="g">Gram (g)</option>
+            <option value="kg">Kilogram (kg)</option>
+            <option value="lb">Pound (lb)</option>
+            <option value="oz">Ounce (oz)</option>
+            <option value="mg">Milligram (mg)</option>
+            </select>
+        <br><br>
+
+        <label for="to_unit_select">To Unit:</label>
+        <select id="to_unit_select" name="to_unit">
+            <option value="g">Gram (g)</option>
+            <option value="kg">Kilogram (kg)</option>
+            <option value="lb">Pound (lb)</option>
+            <option value="oz">Ounce (oz)</option>
+            <option value="mg">Milligram (mg)</option>
+            </select>
+        <br><br>
+
+        <input type="submit" value="Convert">
+    </form>
+
+    <h2>Result:</h2>
+    <p>{{ result_placeholder | default('---') }}</p>
+
+</body>
+</html>
